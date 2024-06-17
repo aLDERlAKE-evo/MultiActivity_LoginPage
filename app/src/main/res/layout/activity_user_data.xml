@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Data">
+
+
+    <TextView
+        android:id="@+id/preferenceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/A2_heading"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="106dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/Login"
+        android:onClick="submitClickHandler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/ageInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="69dp"
+        android:ems="10"
+        android:hint="@string/sampleValue"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_age"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="69dp"
+        android:text="@string/Age_Input"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gender"
+        app:layout_constraintEnd_toStartOf="@+id/ageInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Gender_Input"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/female_radio_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageInput" />
+
+
+    <TextView
+        android:id="@+id/tv_hobbies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/Hobbies_input"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/box_gaming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maleRadioButton" />
+
+    <RadioButton
+        android:id="@+id/female_radio_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="133dp"
+        android:text="@string/female_gender"
+        app:layout_constraintBottom_toTopOf="@+id/box_reading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maleRadioButton"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioButton
+        android:id="@+id/maleRadioButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="78dp"
+        android:text="@string/male_gender"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hobbies"
+        app:layout_constraintEnd_toStartOf="@+id/female_radio_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/box_gaming"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/gaming_hobby"
+        app:layout_constraintBottom_toTopOf="@+id/box_sleeping"
+        app:layout_constraintEnd_toStartOf="@+id/box_reading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hobbies" />
+
+    <CheckBox
+        android:id="@+id/box_coding"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="187dp"
+        android:text="@string/coding_hobby"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_sleeping"
+        app:layout_constraintTop_toBottomOf="@+id/box_reading"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/box_sleeping"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="187dp"
+        android:text="@string/sleeping_hobby"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/box_coding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_gaming" />
+
+    <CheckBox
+        android:id="@+id/box_reading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/reading_hobby"
+        app:layout_constraintBottom_toTopOf="@+id/box_coding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_gaming"
+        app:layout_constraintTop_toBottomOf="@+id/female_radio_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
